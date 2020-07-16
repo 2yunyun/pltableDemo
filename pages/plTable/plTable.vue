@@ -2,23 +2,24 @@
   <!-- 使用 useVirtual 属性开启虚拟滚动 使用虚拟滚动时，必须要固定表格高度和行高 -->
   <div style="height: 100%;width: 100%;padding: 0 30px">
      <div style="color:red;">pl-table在线预览，更多玩法请看文档哦，欢迎Star</div>
-     <el-button @click="$router.push({ path: '/text' })">去子页面(为了测试缓存组件)</el-button>
+     <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="$router.push({ path: '/text' })">去子页面(为了测试缓存组件)</button>
      <div>
-        <el-button @click="allSelection">全选</el-button>
-        <el-button @click="clearSelection">清除选中</el-button>
-        <el-button @click="setData(3)">变化数据为3条</el-button>
-        <el-button @click="setData(200)">变化数据为200条</el-button>
-        <el-button @click="setData(1000)">变化数据为1000条</el-button>
-        <el-button @click="pagingScrollTopLeft(1000)">滚动到1千位置</el-button>
-        <el-button @click="pagingScrollTopLeft(2000)">滚动到2千位置</el-button>
-         <el-button @click="pagingScrollTopLeft(0)">滚动到顶部</el-button>
-        <el-button @click="scrollBottom">滚动到底部位置</el-button>
-        <el-button @click="setHei(400)">设置高度为400</el-button>
-        <el-button @click="setHei(300)">设置高度为300</el-button>
+		 <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="setData(3)">变化数据为3条</button>
+        <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="allSelection">全选</button>
+        <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="clearSelection">清除选中</button>
+        
+        <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="setData(200)">变化数据为200条</button>
+        <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="setData(1000)">变化数据为1000条</button>
+        <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="pagingScrollTopLeft(1000)">滚动到1千位置</button>
+        <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="pagingScrollTopLeft(2000)">滚动到2千位置</button>
+         <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="pagingScrollTopLeft(0)">滚动到顶部</button>
+        <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="scrollBottom">滚动到底部位置</button>
+        <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="setHei(400)">设置高度为400</button>
+        <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="setHei(300)">设置高度为300</button>
     </div>
 
       <!--我是Y轴虚拟-->
-     <div v-if="true">
+     <div v-if="false">
          <p style="color: red">我是Y轴虚拟</p>
          <pl-table ref="plTable"
                    :height="height"
@@ -73,7 +74,7 @@
      </div>
 
       <!--我是加入分页的表格-->
-     <div v-if="false">
+     <div v-if="true">
          <p style="color: red">我是加入分页的表格</p>
          <pl-table :data="data.tableData"
                    big-data-checkbox
@@ -136,13 +137,13 @@
      </div>
 
       <!--我是pl-table大数据树形表格 必须指定 row-key  必须开启use-virtual-->
-     <div v-if="true">
+     <div v-if="false">
           <p style="color: red;">我是pl-table大数据树形表格 必须指定 row-key  必须开启use-virtual</p>
-          <el-button @click="$refs.plTreeTable.toggleTreeExpansion(treeData[0])">切换第一个</el-button>
-          <el-button @click="$refs.plTreeTable.setTreeExpansion(treeData[2], true)">展开第三个</el-button>
-          <el-button @click="$refs.plTreeTable.setAllTreeExpansion()">展开全部</el-button>
-          <el-button @click="$refs.plTreeTable.clearTreeExpand()">关闭所有</el-button>
-          <el-button @click="getTreeExpansionEvent">获取已展开</el-button>
+          <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="$refs.plTreeTable.toggleTreeExpansion(treeData[0])">切换第一个</button>
+          <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="$refs.plTreeTable.setTreeExpansion(treeData[2], true)">展开第三个</button>
+          <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="$refs.plTreeTable.setAllTreeExpansion()">展开全部</button>
+          <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="$refs.plTreeTable.clearTreeExpand()">关闭所有</button>
+          <button class="mini-btn" style="margin: 0 10rpx" type="default" size="mini" @click="getTreeExpansionEvent">获取已展开</button>
           <pl-table ref="plTreeTable"
                     :max-height="height"
                     :data="treeData"
